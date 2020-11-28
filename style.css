@@ -1,0 +1,90 @@
+    body {
+        background-color: black;
+    }
+
+    header {
+        text-align: center;
+        color: white;
+        font-family: 'Stalinist One', cursive;
+        font-size: 35px;
+
+    }
+
+    section {
+        display: flex;
+        justify-content: center;
+        height: 500px;
+        border-radius: 6px;
+        margin: 50px;
+        box-shadow: 2px 2px 30px 20px white;
+
+    }
+
+    div {
+        text-align: center;
+        padding: 50px;
+        width: 100%;
+
+    }
+
+    img:active {     
+        position: relative;
+        animation-name: wurfel-bewegung;
+        animation-duration: 1s;
+        border-radius: 50%;
+    }
+
+    footer {
+        text-align: center;
+        color: white;
+        padding: 50px;
+    }
+
+    @keyframes wurfel-bewegung {
+        0%   {box-shadow: 2px 2px 30px 20px white; left:-400px; top:0px;}
+        10%  {box-shadow: 2px 2px 30px 20px white; left:300px; top:0px;}
+        20%  {box-shadow: 2px 2px 30px 20px white; left:-300px; top:0px;}
+        30%  {box-shadow: 2px 2px 30px 20px white; left:300px; top:0px;}
+        40%  {box-shadow: 2px 2px 30px 20px white; left:0px; top:0px;}
+        55%  {box-shadow: 2px 2px 30px 20px white; left:0px; top:-300px;}
+        75%  {box-shadow: 2px 2px 30px 20px white; left:0px; top:300px;}
+        100% {box-shadow: 2px 2px 30px 20px white; left:0px; top:0px;}
+        
+    }
+
+    p {
+        color: white;
+        font-family: 'Stalinist One', cursive;
+        padding: 30px;
+
+    }
+
+    @media only screen and (max-width: 600px) {
+        #msg {font-size: 13px; padding: 40px; text-align: left;}
+        header {font-size: 25px;}
+        img {width: 200px; height: 200px;}
+        section {height: 400px;}
+        footer {font-size: 13px; margin: 0; padding: 0;}
+        p {padding: 15px;}
+      }
+      
+      /* Small devices (portrait tablets and large phones, 600px and up) */
+      @media only screen and (min-width: 600px) {
+
+    }
+      
+      /* Medium devices (landscape tablets, 768px and up) */
+      @media only screen and (min-width: 768px) {
+
+    } 
+      
+      /* Large devices (laptops/desktops, 992px and up) */
+      @media only screen and (min-width: 992px) {
+        .example {background: orange;}
+      } 
+      
+      /* Extra large devices (large laptops and desktops, 1200px and up) */
+      @media only screen and (min-width: 1200px) {
+        .example {background: pink;}
+      }
+
