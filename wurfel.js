@@ -1,36 +1,17 @@
-function wurfelWerfen () {
-let wurfel = Math.floor(Math.random()*6)+1;
-console.log(wurfel);
-let img = document.querySelector('#img')
-document.querySelector('#msg').innerHTML = 'Viel Spaß!'
+   let wuerfelBild = document.querySelector("#bild");
 
-switch(wurfel){
-    case 1:
-        img.src = './img/wurfel-1.png'
-        break;
-    case 2:
-        img.src = './img/wurfel-2.png'
-        break;
-    case 3:
-        img.src = './img/wurfel-3.png'
-        break;
-    case 4:
-        img.src = './img/wurfel-4.png'
-        break;
-    case 5:
-        img.src = './img/wurfel-5.png'
-        break;
-    case 6:
-        img.src = './img/wurfel-6.png'
-        break;
-    default:
-        img.src = './img/wurfel.png'
-    
-  }
+    //listener
+    wuerfelBild.addEventListener('click', (event) => {
+       event.target.style.backgroundImage=`url("./img/wurfel.png")`;
+       event.target.classList.add("wuerfelAnimation");
 
-}
-//listener
-img.addEventListener('click', wurfelWerfen)
+    })
 
+    wuerfelBild.addEventListener('animationend', (event) => {
+       let zufall = Math.floor(Math.random()*6)+1;
+       console.log(zufall)
+       event.target.style.backgroundImage=`url("./img/wurfel-${zufall}.png")`;
+       event.target.classList.remove("wuerfelAnimation");
 
-
+    });
+        
